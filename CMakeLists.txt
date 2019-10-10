@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.15)
-project(CS1103_PC2_201902)
+cmake_minimum_required(VERSION 3.14)
+project(Practica)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CS1103_PC2_201902 main.cpp heap.h)
+add_executable(Practica main.cpp)

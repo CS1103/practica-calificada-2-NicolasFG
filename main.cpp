@@ -1,30 +1,27 @@
 #include <iostream>
 
-#include "heap.h"
 using namespace std;
+
+#include "heap.h"
 
 int main()
 {
-    heap<int> h;
-    load_from("data.txt", h);
-    cout << "heap" << endl;
-    cout << h;
+    head<int> h;
+
     h.insert(10);
     h.insert(20);
     h.insert(40);
     h.insert(50);
     h.insert(10);
-    cout << "heap" << endl;
-    cout << h;
-    cout << "heap" << endl;
-    cout << h;
-    cin >> h;
-    cout << "heap" << endl;
-    cout << h;
-    insert(h, 100, 200);
-    cout << "heap" << endl;
-    cout << h;
+
+    // Obtiene el maximo
+    cout << "El maximo es: " << h.get_max() << endl;
+
     load_from("data.txt", h);
-    cout << h;
+
+    // Imprime todos los valores
+    h.print();
+
+
     return 0;
 }
