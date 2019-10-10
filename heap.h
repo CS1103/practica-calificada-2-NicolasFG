@@ -1,15 +1,12 @@
 #ifndef CS1103_PC2_201902_HEAP_H;
 #define CS1103_PC2_201902_HEAP_H
-
 #include <fstream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
-
 // Definicion de la estructura generica para max head (pila)
-template<class T, class Contenedor>
+template<class T>
 struct head
 {
    vector<T> info;
@@ -38,17 +35,24 @@ struct head
         }
     }
 
+    template <typename ... Args>
+    vector<int> insert_items(Args ... args) {
+        vector<int> datos;
+
+        //Ingresamos el conjunto de datos en el contenedor
+        for (auto &v: {args ...}) {
+            datos.push_back(v);
+        }
+        return datos;
+    }
 
 
-
-
-
-    friend std::ostream& operator << (std::ostream& out, const head<Contenedor>& head){
+   /* friend std::ostream& operator << (std::ostream& out, const head<Contenedor>& head){
         for(auto &v:head.datos) {
             out<< v << " ";
         }
         return out;
-    }
+    }*/
 
 };
 

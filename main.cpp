@@ -14,6 +14,8 @@ int main()
     h.insert(50);
     h.insert(10);
 
+    h.insert_items(12,12);
+
     // Obtiene el maximo
     cout << "El maximo es: " << h.get_max() << endl;
 
